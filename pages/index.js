@@ -43,7 +43,7 @@ export default function Home() {
               <AiFillLinkedin />
             </div>
             <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-              <Image loader={myLoader} src="yampaul.jpg" layout="fill" objectFit="cover"/>
+              <Image loader={myLoader} src="yampaul.png" layout="fill" objectFit="cover"/>
             </div>
             <section>
               <div>
