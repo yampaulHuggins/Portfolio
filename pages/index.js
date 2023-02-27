@@ -2,12 +2,11 @@ import Head from 'next/head';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin} from 'react-icons/ai';
 import Image from 'next/image';
-import yampaul from './../public/yampaul.jpg'
-import design from './../public/design.png';
-import code from './../public/code.png';
-import consulting from './../public/consulting.png';
-import ff360 from './../public/ff360.png';
 import {useState} from 'react';
+
+const myLoader = (src) => {
+  return `../public/${src}`
+}
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -44,7 +43,7 @@ export default function Home() {
               <AiFillLinkedin />
             </div>
             <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-              <Image src={yampaul} layout="fill" objectFit="cover"/>
+              <Image loader={myLoader} src="yampaul.jpg" layout="fill" objectFit="cover"/>
             </div>
             <section>
               <div>
@@ -57,7 +56,7 @@ export default function Home() {
               </div>
               <div className="lg:flex gap-10 mx-auto ">
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-400">
-                  <Image src={design} width={100} height={100}/>
+                  <Image loader={myLoader} src="design.png" width={100} height={100}/>
                   <h3 className="text-lg font-medium pt-8 pb-2">Current Job</h3>
                   {/* <p className="py-2"></p> */}
                   <h4 className="py-4 text-teal-600">What I've been working on:</h4>
@@ -68,7 +67,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-400">
-                  <Image src={code} width={100} height={100}/>
+                  <Image loader={myLoader} src="code.png" width={100} height={100}/>
                   <h3 className="text-lg font-medium pt-8 pb-2">Freelancing</h3>
                    {/* <p className="py-2"></p> */}
                   <h4 className="py-4 text-teal-600">What I've been working on:</h4>
@@ -79,7 +78,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-400">
-                  <Image src={consulting} width={100} height={100}/>
+                  <Image loader={myLoader} src="consulting.png" width={100} height={100}/>
                   <h3 className="text-lg font-medium pt-8 pb-2">What's next?</h3>
                   {/* <p className="py-2"></p> */}
                   <h4 className="py-4 text-teal-600">What I aspire to everyday:</h4>
@@ -102,23 +101,8 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
                   <div className="basis-1/3 flex-1">
-                    <Image src={ff360} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
+                    <Image loader={myLoader} src="ff360.png" className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive" />
                   </div>
-                  {/* <div className="basis-1/3 flex-1">
-                    <Image src={web2} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-                  </div>
-                  <div className="basis-1/3 flex-1">
-                    <Image src={web3} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-                  </div>
-                  <div className="basis-1/3 flex-1">
-                    <Image src={web4} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-                  </div>
-                  <div className="basis-1/3 flex-1">
-                    <Image src={web5} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-                  </div>
-                  <div className="basis-1/3 flex-1">
-                    <Image src={web6} className="rounded-lg object-cover" width={'100%'} height={'100%'} layout="responsive"/>
-                  </div> */}
                 </div>
               </div>
             </section>
